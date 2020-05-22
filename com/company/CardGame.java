@@ -14,7 +14,8 @@ public class CardGame {
 
     public static Scanner note = new Scanner(System.in);
     private static List Card;
-    Deck Joker = new Deck();
+    private static Deck Joker;
+
 
         public static void main(String[] args) {
             int menu = 0;
@@ -48,7 +49,7 @@ public class CardGame {
             }//end while loop
         }//end main
 
-    public String Game(){ //the game itself
+    public static String Game(){ //the game itself
         int menu2 = 0;
         int dealer = 0;
         int player = Joker.getTVofHand();
