@@ -48,9 +48,14 @@ public class CardGame {
             }//end while loop
         }//end main
 
-    public static void Game(){ //the game itself
+    public String Game(){ //the game itself
         int menu2 = 0;
-
+        int dealer = 0;
+        int player = Joker.getTVofHand();
+        String prompt = "";
+        Scanner box = new Scanner(System.in);
+        
+        
         System.out.println("1. Deal Round.");
         System.out.println("2. Hit me.");
         System.out.println("3. Stay.");
@@ -59,38 +64,50 @@ public class CardGame {
         System.out.println();
         String response = note.nextLine();
         menu2 = Integer.parseInt(response);
-        switch (menu2){
-            case 1: //will give the players their cards
 
-            break;
+        while(!prompt.equalsIgnoreCase("n")) {
+            switch (menu2) {
+                case 1: //will give the players their cards
+                    Joker.getNewCardFromDeck(Joker);
+                    Joker.getNewCardFromDeck(Joker);
+                    break;
 
-            case 2: //gives an extra card
-                getNewCardFromDeck
-            break;
-            case 3: //youre happy with the cards
+                case 2: //gives an extra card
 
-            break;
+                    Joker.getNewCardFromDeck(Joker);
 
-            case 4://you got over 21
-                System.out.println("Dealer wins, you have over 21");
-            break;
+                    break;
+                case 3: //youre happy with the cards
+                    System.out.println("");
+                    compare(dealer, player);
+                    break;
 
-            case 5:
-                System.out.println("Dealer wins automatically by forfeit.");
-                System.exit(0);
-            break;
+                case 4://you got over 21
+                    compare(dealer, player);
+                    break;
+
+                case 5:
+                    System.out.println("Dealer wins automatically by forfeit.");
+                    System.exit(0);
+                    break;
+            }
+
         }
+        return prompt;
     }
             //the dealers hand is dealt
-            public dealerHand(){
+            public static int dealerHand(){
+                int dealer = 0;
 
+
+                return dealer;
             }//end of the dealers hand
 
             //compares the two hands to see who wins
 
-    public void compare(int value){
+    public static void compare(int dealer, int player){
             if(dealer > player){//dealers hand is closer to 21
-                System.out.println("Dealer wins!");
+                System.out.println("Dealer wins!You have over 21.");
             }else if(dealer == player){ //the numbers are equal
                 System.out.println("A tie!");
 
