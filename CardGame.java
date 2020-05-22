@@ -16,9 +16,6 @@ public class Card_Game{
     public static void main(String[] args) {
     int menu = 0;
 
-
-    Array Suit = new int[] {clubs, diamonds, spades, hearts};
-    Array rank = new int[] {1,2,3,4,5,6,7,8,9,10,11};
     while (menu != 3) {
         System.out.println("1. How to play");
         System.out.println("2. Lets Play.");
