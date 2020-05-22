@@ -55,18 +55,18 @@ public class CardGame {
         int player = Joker.getTVofHand();
         String prompt = "";
         Scanner box = new Scanner(System.in);
-        
-        
+
+        while(menu2 != 5) {
         System.out.println("1. Deal Round.");
         System.out.println("2. Hit me.");
         System.out.println("3. Stay.");
         System.out.println("4. Bust.");
         System.out.println("5. Quit.");
         System.out.println();
-        String response = note.nextLine();
-        menu2 = Integer.parseInt(response);
+        String response2 = note.nextLine();
+        menu2 = Integer.parseInt(response2);
 
-        while(!prompt.equalsIgnoreCase("n")) {
+
             switch (menu2) {
                 case 1: //will give the players their cards
                     Joker.getNewCardFromDeck(Joker);
