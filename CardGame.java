@@ -14,76 +14,41 @@ public class Card_Game{
     
 
     public static void main(String[] args) {
+    int menu = 0;
+
 
     Array Suit = new int[] {clubs, diamonds, spades, hearts};
     Array rank = new int[] {1,2,3,4,5,6,7,8,9,10,11};
-    while (menu != 5) {
+    while (menu != 3) {
         System.out.println("1. How to play");
-        System.out.println("2. Hit me.");
-        System.out.println("3. Fold.");
-        System.out.println("4. Play again.");
-        System.out.println("5. Quit");
-        response; //to be formatted eventually
+        System.out.println("2. Lets Play.");
+        System.out.println("3. Quit");
+        String response = book.nextLine();
+        menu = Integer.parseInt(response);
 
-
-        switch (response) {
+        switch (menu) {
             case 1: //instuctions
-                System.out.println(instuctions);
-            break;
+                instuctions();
+                break;
 
             case 2: //adds one more card
-                switch(){
 
+                break;
 
+            case 3: //im done, thanks
+                System.exit(0);
+                break;
 
-
-                    case 1: //deals player another card
-
-                    break;
-                    case : 
-                    break;
-                    case :
-                    break;
-                    case :
-                    break;
-                    case :
-                    break;
-                    case :
-                    break;
-                
-                }
-            break;
-
-            case 3: //i give up option
-
-            break;
-
-            case 4: //i want to play again
-                if()}{
-
-                }else if() {
-                    
-                } else {
-                    
-                }
-            break;
-
-            case 5: //im done, thanks
-             System.exit(0);
-            break;
-        
             default: //man you should have read the options :c
                 System.out.println("This is an invalid option, please try again.");
-            break;
+                break;
+                }//end switch case
             }//end while loop
-        }//end switch case
-    }//end while loop
-
+        }//end main
 
     // will deal the original 2 cards
     public dealHand(){
         //randomizer needed to deal the cards fairly
-
 
     }//end dealing hand
 
@@ -105,8 +70,7 @@ public class Card_Game{
         }
             
     }//end compare
-
-    public void instructions (){
+    private static void instuctions() {
         //instructions on how to play the game
         System.out.println("Aim of the 21 Card Game is to get 21 or as close to as possible.");
         System.out.println("Number cards have their face value, jacks, kings and queens are worth 10");
@@ -123,5 +87,6 @@ public class Card_Game{
         System.out.println("If the dealer goes bust then everyone else wins.");
         System.out.println("We reshuffle the deck of cards after every game.");
         System.out.println();
-    }//end instructions 
+    }//end instructions
+
 }//end class
