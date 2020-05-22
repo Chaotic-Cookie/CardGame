@@ -1,10 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
-import java.lang.reflect.Array;
-import java.util.Scanner;
 
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 /*
 Student: Mairam Khatib
 Spring 2020
@@ -48,38 +45,58 @@ public class CardGame {
             }//end while loop
         }//end main
 
-    public static void Game(){
+    public static void Game(){ //the game itself
+        int menu2 = 0;
 
+        System.out.println("1. Deal Round.");
+        System.out.println("2. Hit me.");
+        System.out.println("3. Stay.");
+        System.out.println("4. Bust.");
+        System.out.println("5. Quit.");
+        System.out.println();
+        String response = note.nextLine();
+        menu2 = Integer.parseInt(response);
+        switch (menu2){
+            case 1: //will give the players their cards
 
+            break;
 
+            case 2: //gives an extra card
 
+            break;
+            case 3: //youre happy with the cards
+
+            break;
+
+            case 4://you got over 21
+                System.out.println("Dealer wins, you have over 21");
+            break;
+
+            case 5:
+                System.out.println("Dealer wins automatically by forfeit.");
+                System.exit(0);
+            break;
+        }
     }
-        /*
-            // will deal the original 2 cards
-            public static void game(){
-                //randomizer needed to deal the cards fairly
-
-            }//end dealing hand
-
             //the dealers hand is dealt
             public dealerHand(){
 
             }//end of the dealers hand
 
             //compares the two hands to see who wins
-            public compare(int value){
 
-                if(dealer > player){//dealers hand is closer to 21
-                    System.out.println("Dealer wins!");
-                }else if(dealer == player){ //the numbers are equal
-                    System.out.println("A tie!");
+    public void compare(int value){
+            if(dealer > player){//dealers hand is closer to 21
+                System.out.println("Dealer wins!");
+            }else if(dealer == player){ //the numbers are equal
+                System.out.println("A tie!");
 
-                }else{ //the players is closer to 21
-                    System.out.println("Player wins!");
-                }
+            }else{ //the players is closer to 21
+                System.out.println("Player wins!");
+            }
 
             }//end compare
-            */
+
         private static void instuctions() {
             //instructions on how to play the game
             System.out.println("Aim of the 21 Card Game is to get 21 or as close to as possible.");
