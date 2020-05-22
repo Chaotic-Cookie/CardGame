@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -12,6 +13,8 @@ This program will play a game of 21/black jack
 public class CardGame {
 
     public static Scanner note = new Scanner(System.in);
+    private static List Card;
+    Deck Joker = new Deck();
 
         public static void main(String[] args) {
             int menu = 0;
@@ -62,7 +65,7 @@ public class CardGame {
             break;
 
             case 2: //gives an extra card
-
+                getNewCardFromDeck
             break;
             case 3: //youre happy with the cards
 
