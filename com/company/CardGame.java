@@ -52,7 +52,6 @@ public class CardGame {
     public static String Game(){ //the game itself
         int menu2 = 0;
         int dealer = 0;
-        int player = Joker.getTVofHand();
         String prompt = "";
         Scanner box = new Scanner(System.in);
 
@@ -79,11 +78,13 @@ public class CardGame {
 
                     break;
                 case 3: //youre happy with the cards
+                    int player = Joker.getTVofHand();
                     System.out.println("");
                     compare(dealer, player);
                     break;
 
                 case 4://you got over 21
+                    player = Joker.getTVofHand();
                     compare(dealer, player);
                     break;
 
