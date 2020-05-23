@@ -16,7 +16,6 @@ public class CardGame {
     public static Scanner note = new Scanner(System.in);
     private static List Card;
     private static Deck Joker;
-    private static Object ArrayList;
     private ArrayList<Card> Player_hand;
     private ArrayList<Card> Dealer_hand;
     private static ArrayList<Card> hand;
@@ -55,6 +54,7 @@ public class CardGame {
     public static String Game(){ //the game itself
         int menu2 = 0;
         int dealer = 0;
+        int player = Joker.getTVofHand();
         String prompt = "";
         Scanner box = new Scanner(System.in);
 
@@ -77,17 +77,15 @@ public class CardGame {
 
                 case 2: //gives an extra card
 
-                    Joker.getNewCardFromDeck(Joker);
+                    //Joker.getNewCardFromDeck(Joker);
 
                     break;
                 case 3: //youre happy with the cards
-                    int player = Joker.getTVofHand();
                     System.out.println("");
                     compare(dealer, player);
                     break;
 
                 case 4://you got over 21
-                    player = Joker.getTVofHand();
                     compare(dealer, player);
                     break;
 

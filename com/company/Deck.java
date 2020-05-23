@@ -41,11 +41,11 @@ public class Deck {
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
-
+/*
     public void getNewCardFromDeck(Deck deck) {
         cards.add(deck.cards.get(0));
         deck.removeCard(0);
-    }
+    } */
 
     public int getSizeOfDeck() {
         return cards.size();
