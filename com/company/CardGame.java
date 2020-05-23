@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /*
-Student: Mairam Khatib
+Student: Mairam Khatib, Kylee Johnson and Nathan Cowley
 Spring 2020
 Lab 4: Deck of cards
 
@@ -54,7 +54,6 @@ public class CardGame {
     public static String Game(){ //the game itself
         int menu2 = 0;
         int dealer = 0;
-        int player = Joker.getTVofHand();
         String prompt = "";
         Scanner box = new Scanner(System.in);
 
@@ -77,15 +76,17 @@ public class CardGame {
 
                 case 2: //gives an extra card
 
-                    //Joker.getNewCardFromDeck(Joker);
+                    drawCard(hand, Joker);
 
                     break;
                 case 3: //youre happy with the cards
+                    int player = Joker.getTVofHand();
                     System.out.println("");
                     compare(dealer, player);
                     break;
 
                 case 4://you got over 21
+                    player = Joker.getTVofHand();
                     compare(dealer, player);
                     break;
 
@@ -117,6 +118,7 @@ public class CardGame {
             //compares the two hands to see who wins
 
     public static void compare(int dealer, int player){
+
             if(dealer > player){//dealers hand is closer to 21
                 System.out.println("Dealer wins!You have over 21.");
             }else if(dealer == player){ //the numbers are equal
