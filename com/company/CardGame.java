@@ -10,6 +10,9 @@ Spring 2020
 Lab 4: Deck of cards
 
 This program will play a game of 21/black jack
+
+Code has issue with dealing the cards itself, unknown why. Dealers hand didnt have enough time to get done.
+
 */
 public class CardGame {
 
