@@ -5,7 +5,12 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class Deck {
-    ArrayList<Card> cards = new ArrayList<>();
+    ArrayList<Card> cards;
+
+    public Deck(){
+        this.cards = new ArrayList<Card>();
+        fillDeck();
+    }
 
     public void fillDeck() {
         for(int a = 0; a < Card.CardSuit.getSuitLength(); a++) {

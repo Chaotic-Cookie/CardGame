@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,7 +16,9 @@ public class CardGame {
     public static Scanner note = new Scanner(System.in);
     private static List Card;
     private static Deck Joker;
-
+    private static Object ArrayList;
+    private ArrayList<Card> Player_hand;
+    private ArrayList<Card> Dealer_hand;
 
         public static void main(String[] args) {
             int menu = 0;
@@ -68,8 +71,8 @@ public class CardGame {
 
             switch (menu2) {
                 case 1: //will give the players their cards
-                    Joker.getNewCardFromDeck(Joker);
-                    Joker.getNewCardFromDeck(Joker);
+
+                    drawCard(ArrayList hand, Joker);
                     break;
 
                 case 2: //gives an extra card
@@ -93,10 +96,18 @@ public class CardGame {
                     System.exit(0);
                     break;
             }
-
         }
         return prompt;
     }
+    //this deals out the cards to the players
+    public static void drawCard(ArrayList<Card> hand, Deck Joker){
+        Card temp;
+        temp = Joker.cards.get(0);
+        hand.add(temp);
+        Joker.cards.remove(0);
+
+    }
+
             //the dealers hand is dealt
             public static int dealerHand(){
                 int dealer = 0;
@@ -123,12 +134,13 @@ public class CardGame {
             //instructions on how to play the game
             System.out.println("Aim of the 21 Card Game is to get 21 or as close to as possible.");
             System.out.println("Number cards have their face value, jacks, kings and queens are worth 10");
-            System.out.println("Ace can be either 1 or 11 and the player who holds the ace gets to choose the value of the card.");
+            System.out.println("Ace can be either 1 or 11 and the player who holds " +
+                    "\nthe ace gets to choose the value of the card.");
             System.out.println("The dealer and all other players have two cards.");
             System.out.println("With the exception of the dealer the players have their cards face up. ");
             System.out.println("The dealer has one card up and one card face down.");
             System.out.println("The dealer goes to each player one at a time.");
-            System.out.println("The player needs to decide if they want another card (hit) or will sit on what they have.");
+            System.out.println("The player needs to decide if they want to hit or will sit on what they have.");
             System.out.println("You can have as many cards as you like as long as you don’t go over 21.");
             System.out.println("Players are not competing against each other, but against the dealer.");
             System.out.println("The dealer then turns over their other card and needs to decide what to do.");
