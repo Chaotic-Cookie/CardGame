@@ -19,7 +19,7 @@ public class CardGame {
     private static Object ArrayList;
     private ArrayList<Card> Player_hand;
     private ArrayList<Card> Dealer_hand;
-
+    private static ArrayList<Card> hand;
         public static void main(String[] args) {
             int menu = 0;
 
@@ -72,7 +72,7 @@ public class CardGame {
             switch (menu2) {
                 case 1: //will give the players their cards
 
-                    drawCard(ArrayList hand, Joker);
+                    drawCard(hand, Joker);
                     break;
 
                 case 2: //gives an extra card
